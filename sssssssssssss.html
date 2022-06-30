@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <pre> <script>
+    var d = ["민정", "민우선배님", "유현", "준", "세희선배님", "유진"];
+    
+     var ran_num = new Array();
+     var i;
+
+        for(i=0 ; i< d.length; i++)
+        {
+             var ran= Math.floor(Math.random()*d.length);
+
+            if(ran_num.indexOf(ran) != -1)
+            {
+                i--;
+            }
+            else if(i == ran)
+            {
+                i--;
+            }
+            else
+            {
+                ran_num.push(ran);  
+            }
+        }
+
+        for(i = 0; i<d.length; i++)
+        {
+            document.writeln((i+1)+"번"+""+d[ran_num[i]+""]);
+        }
+</script></pre>
+</body>
+</html>

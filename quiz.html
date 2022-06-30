@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    div{
+        text-align: center;}
+    *{
+        background-color: rgb(234, 226, 241);
+    }
+        </style>
+    
+</head>
+<body>
+    <div>
+        <pre>
+        <ul>원숭이 원픽 과일</ul>
+        <input type = "text" id="aa">
+        <ul>코끼리가 사과 먹는 법(단답)</ul>
+        <input type = "text" id="bb">
+        <ul>김유진 고향</ul>
+        <input type = "text" id="cc">
+        <ul>김유진 초등학교</ul>
+        <input type = "text" id="dd">
+        <ul>김유진 고등학교</ul>
+        <input type = "text" id="ee">
+        
+
+        <button id="but" >제출하기</button><br>
+        <table border="1" style = "text-align:center;" id="an" >
+            <tr><td colspan = "5">정답</td></tr>
+            <tr><td>바나나</td>
+            <td>코</td>
+            <td>공주대</td>
+            <td>아산</td>
+            <td>점프</td></tr>
+        </table>
+    </pre>
+</div>
+    
+    
+
+    <script>
+
+    an.style.visibility = "hidden";
+
+        
+    setTimeout(function(){
+ 	alert("제출 버튼 눌러주세요"); 
+    }, 10000);//wait 10 seconds
+
+    but.addEventListener('click', function()
+        {
+            an.style.visibility = "visible";    
+
+        })
+    </script>
+
+</body>
+</html>

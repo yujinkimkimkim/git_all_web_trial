@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <p>입력한 값</p>
+
+        <p id = "text"></p>
+        <p id = "text1"></p>
+        <p id = "text2"></p>
+        <p id = "text3"></p>
+        <p id = "text4"></p>
+
+        <table border="1" style = "text-align:center;"  >
+            <tr><td colspan = "5">정답</td></tr>
+            <tr><td>바나나</td>
+            <td>코</td>
+            <td>공주대</td>
+            <td>아산</td>
+            <td>점프</td></tr>
+         </table>
+        
+<ul>dkdkdkd</ul>
+        
+        <script>
+    
+            var input = prompt("원숭이가 좋아하는 과일");
+            var text = document.getElementById("text");
+
+            var input1 = prompt("코끼리가 과자 먹는 법(단답형)");
+            var text1 = document.getElementById("text1");
+
+            var input2 = prompt("우리 학교 이름");
+            var text2 = document.getElementById("text2");
+
+            var input3 = prompt("김유진 고향");
+            var text3 = document.getElementById("text3");
+
+            var input4 = prompt("00 투 자바");
+            var text4 = document.getElementById("text4");
+
+            text.innerHTML = input;
+            text1.innerHTML = input1;
+            text2.innerHTML = input2;
+            text3.innerHTML = input3;
+            text4.innerHTML = input4;
+
+        </script>
+</body>
+</html>

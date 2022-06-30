@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      #google{
+        text-align: center;
+      }
+        .outer {
+  border: 6px solid rgb(63, 63, 63);
+  width: 1000px;
+  height: 500px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+.inner-list {
+  display: flex;
+  transition: .3s ease-out;
+  height: 100%;
+}
+
+.inner {
+  border: 6px solid rgb(238, 238, 238);
+  padding: 0 16px;
+}
+
+#pic4{
+  margin: 0 auto;
+}
+
+.button-list {
+  text-align: center;
+}
+    </style>
+</head>
+<body>
+  <section id="tab-section-1" class="tab-section">
+  <h1 id="google">Google 소개 페이지 main</h1>
+    <div class="outer">
+        <div class="inner-list">
+          <div class="inner">
+            <img src="./pic1.jpg" width="900px">
+          </div>
+          <div class="inner">
+            <img src="./pic2.png" width="900px">
+          </div>
+          <div class="inner">
+            <img src="./pic3.jpg" width="900px">
+          </div>
+        </div>
+      </div>
+      
+      <div class="button-list">
+        <button class="button-left">← Left</button>
+        <button class="button-right">Right →</button>
+      </div>
+    </section>
+
+    <section id="tab-section-2" class="tab-section" hidden>
+      <h1>Google이란?</h1>
+      <img src="pic5.svg" width="800px">
+      <p>구글(Google)은 웹 검색, 포털 사이트, 또는 관련 사이트를 운영하고 
+        광고를 주 사업 영역으로 하는 미국의 다국적 IT 회사, 또는 구글 사가 서비스하는 
+        검색 엔진을 가리킨다. 전 세계에서 압도적 1위를 차지하는 검색 엔진이며, 2018년부로 
+        20주년을 맞는 다국적 기업이자 역사상 가장 큰 인터넷 기업 중 하나로 마이크로소프트, 아마존닷컴, 
+        Apple과 함께 MAGA의 일원이다.
+        2015년 8월 11일 지주회사 체제로 전환하면서, 기업 알파벳이 새로 세워지고 그 자회사가 
+        되었다.</p>
+    </section>
+
+    <section id="tab-section-3" class="tab-section" hidden>
+      <h1>Google ceo</h1>
+      <img src="pic4.jpg" width="500px" id="pic4">
+      <p>-이름:선다 피차이(Sundar Pichai)</p>
+      <p>-생애
+        1972년 7월 12일 인도 타밀나두 주의 마두라이에서 태어났다.
+        아버지는 미국 GE 회사의 전기공학자로서, 전기 부품을 제조하는 공장을 경영했다.</p>
+
+    </section>
+      <br>
+      <br>
+      <!-- ---------------------------------------------- -->
+      <header>
+        <nav id="tab-button-nav">
+          <button class="tab-button" data-tab-section="tab-section-1">탭 1</button>
+          <button class="tab-button" data-tab-section="tab-section-2">탭 2</button>
+          <button class="tab-button" data-tab-section="tab-section-3">탭 3</button>
+        </nav>
+      </header>
+      <main>
+        <br>
+        
+        
+        <section id="tab-section-3" class="tab-section" hidden>
+        </section>
+      </main>
+      <script>
+        /*
+  div사이즈 동적으로 구하기
+*/
+const outer = document.querySelector('.outer');
+const innerList = document.querySelector('.inner-list');
+const inners = document.querySelectorAll('.inner');
+let currentIndex = 0; // 현재 슬라이드 화면 인덱스
+
+inners.forEach((inner) => {
+  inner.style.width = `${outer.clientWidth}px`; // inner의 width를 모두 outer의 width로 만들기
+})
+
+innerList.style.width = `${outer.clientWidth * inners.length}px`; // innerList의 width를 inner의 width * inner의 개수로 만들기
+
+/*
+  버튼에 이벤트 등록하기
+*/
+const buttonLeft = document.querySelector('.button-left');
+const buttonRight = document.querySelector('.button-right');
+
+buttonLeft.addEventListener('click', () => {
+  currentIndex--;
+  currentIndex = currentIndex < 0 ? 0 : currentIndex; // index값이 0보다 작아질 경우 0으로 변경
+  innerList.style.marginLeft = `-${outer.clientWidth * currentIndex}px`; // index만큼 margin을 주어 옆으로 밀기
+  clearInterval(interval); // 기존 동작되던 interval 제거
+  interval = getInterval(); // 새로운 interval 등록
+});
+
+buttonRight.addEventListener('click', () => {
+  currentIndex++;
+  currentIndex = currentIndex >= inners.length ? inners.length - 1 : currentIndex; // index값이 inner의 총 개수보다 많아질 경우 마지막 인덱스값으로 변경
+  innerList.style.marginLeft = `-${outer.clientWidth * currentIndex}px`; // index만큼 margin을 주어 옆으로 밀기
+  clearInterval(interval); // 기존 동작되던 interval 제거
+  interval = getInterval(); // 새로운 interval 등록
+});
+
+/*
+  주기적으로 화면 넘기기
+*/
+const getInterval = () => {
+  return setInterval(() => {
+    currentIndex++;
+    currentIndex = currentIndex >= inners.length ? 0 : currentIndex;
+    innerList.style.marginLeft = `-${outer.clientWidth * currentIndex}px`;
+  }, 2000);
+}
+
+let interval = getInterval(); // interval 등록
+
+/*---------------------------------------------------*/
+const $nav = document.querySelector('#tab-button-nav')
+    const $sections = document.querySelectorAll('.tab-section');
+
+    $nav.addEventListener('click', (e) => {
+      if (!e.target.classList.contains('tab-button')) {
+        return;
+      }
+      
+      const focusedTabId = e.target.dataset.tabSection;
+
+      $sections.forEach(($section) => {
+        if ($section.id === focusedTabId) {
+          $section.removeAttribute('hidden');
+        } else {
+          $section.setAttribute('hidden', true);
+        }
+      });
+    });
+      </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick ="ranNum();">뇸뇸뇸ㄴ묘</button>
+    <button onclick ="clickevent();">ㄴ먀냠냔ㅁㄴ</button>
+    <button onclick ="clickevent1();">ㄴ먀duasuasuaㄴ</button>
+var a = document.querySelector(".box>#city>li");
+    <style>k000
+          a{
+              color: blueviolet;
+          }
+    </style>
+    <div class = "box">
+        <ul id = "city">
+            <li>서울</li>
+            <li>공주</li>
+            <li>천안</li>
+        </ul>
+
+        <ul id="fruit">
+            <li>딸기</li>
+            <li>포도</li>
+            <li>사과</li>
+        </ul>
+    </div>
+    <script>
+    box.classList.add('');
+
+       /* function clickevent(){
+                var a = document.querySelector(".box>#city>li");
+                alert(a);
+            }*/
+
+        function clickevent1(){
+            i = 0;
+            setInterval(function(){
+                document.write(i++);
+            },1000);
+
+        }
+        
+        
+
+
+
+
+        /*function ranNum(){
+            var ran_num= Math.floor(Math.random()*6);
+            alert(ran_num);
+        }*/
+        
+        var d = ["민정", "민우선배님", "유현", "준", "세희선배님", "유진"];
+        console.log(d.length);
+        var ran= Math.floor(Math.random()*d.length)+1;
+        
+         var ran_num = new Array();
+            ran_num.push(ran);
+
+
+            for(i=1 ; i< d.length; i++)
+            {
+                if(ran_num.indexOf(ran) != -1)
+                {
+                    i--;
+                }
+                else
+                {
+                    ran_num.push(ran);  
+                }
+            }
+    </script>
+</body>
+</html>

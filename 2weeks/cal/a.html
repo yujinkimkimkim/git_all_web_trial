@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            background-color: rgb(182, 141, 221);
+        }
+        div{
+            text-align: center;
+        }
+        button{
+            background-color: rgb(165, 86, 211);
+            text-decoration: none;
+        }
+    </style>
+    <div>
+        <H1>
+        사칙연산 프로그램
+    </H1>
+    <input type = "text" id="aa">
+    <input type = "text" id="bb"><br>
+    <button onclick="add();">더하기</button><br>
+    <button onclick="min();">빼기</button><br>
+    <button onclick="mul();">곱하기</button><br>
+    <button onclick="div();">나누기</button><br>
+    <input type = "text" id="result">
+    </div>
+    
+    
+    <script>
+        function add(){
+    var a = Number(document.getElementById("aa").value);
+    var b = Number(document.getElementById("bb").value);
+    document.getElementById("result").value = a + b;
+    }
+    function min(){
+    var a = Number(document.getElementById("aa").value);
+    var b = Number(document.getElementById("bb").value);
+    document.getElementById("result").value = a - b;
+    }
+    function mul(){
+    var a = Number(document.getElementById("aa").value);
+    var b = Number(document.getElementById("bb").value);
+    document.getElementById("result").value = a * b;
+    }
+    function div(){
+    var a = Number(document.getElementById("aa").value);
+    var b = Number(document.getElementById("bb").value);
+    document.getElementById("result").value = a / b;
+    }
+    </script>
+
+
+
+</body>
+</html>

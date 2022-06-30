@@ -1,0 +1,207 @@
+#nav {
+    height: 60px;
+    width: 100vw;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.3);
+    line-height: 60px;
+    position: sticky;
+    background-color: white;
+    z-index: 1000;
+    top: 0;
+}
+
+BODY {
+    background-color: aliceblue;
+    font-family: 'NanumSquare';
+    font-weight: 400;
+}
+
+#nav .nav_container {
+    display: flex;
+    max-width: 980px;
+    margin: auto;
+}
+
+#nav .nav_containerhi {
+    display: block;
+    font-family: 'Cookie', cursive;
+    font-size: 32px;
+    color: black;
+    margin-left: 28px;
+    margin-right: 28px;
+    white-space: nowrap; /*글자 줄바꿈 방지*/
+}
+
+#nav .nav_container .search {
+    background-color: wheat;
+    border-radius: 10px;
+    display: flex;
+    padding-left: 16px;
+    margin: auto;
+
+    width: 20vw;
+    height: 36px;
+
+    max-width: 400px;
+}
+
+#nav .nav_container .search input{
+    margin: auto;
+    margin-left: 10px;
+    height: 36px;
+    display: block;
+}
+
+#nav .nav_container .nav_menu {
+    display: flex;
+    margin-left: 28px;
+}
+
+#nav .nav_container .nav_menu>a {
+    display: block;
+    margin-right: 28px;
+    font-size: 24px;
+    cursor: pointer;
+    color: antiquewhite;
+}
+
+#nav .nav_container .nav_menu>a:hover {
+    color: black;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#nav .nav_container .nav_menu>a:active {
+    color: bisque;
+}
+
+#post {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin: auto;
+    width: 100vw;
+    max-width: 620px;
+}
+
+#post .post_container {
+    background-color: aliceblue;
+    border: 1px solid #efefef;
+    font-size: 14px;
+    color: black;
+    margin-bottom: 32px;
+}
+
+#post .post_top {
+    display: flex;
+    height: 60px;
+    line-height: 60px;
+    margin: auto 20px;
+}
+
+#post .post_top >div {
+    display: flex;
+}
+
+#post .post_top .profile_img {
+    border-radius: 50px;
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+    margin: auto;
+}
+
+#post .post_top .profile_img >img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#post .post_top .user_id {
+    font-weight:  bold;
+    margin-left : 10px;
+}
+
+
+#post .post_img {
+    display: fit-content;
+    margin-left: auto;
+}
+#post .post_top>img {
+    display: block;
+    margin-left: auto;
+}
+
+#post .post_img {
+    width: fit-content;
+    max-width: 620px;
+    overflow: hidden;
+}
+
+#post .post_img>img{
+    width: 100%;
+    object-fit: cover;
+}
+
+#post .post_contents {
+    margin: flex;
+    margin-bottom: 20px;
+}
+
+#post .post_contents .post_icons 
+{
+    display: flex;
+    margine: 20px
+}
+
+#post .post_contents .post_icons>img:not(:last-child){
+    margin-right: 20px;
+}
+
+#post .post_contents .post_icons >img:last-child{
+    margin-left: auto;
+}
+
+#post .post_contents .pont_text .time {
+    color:darkgray;
+    font-size: 10px;
+}
+
+#post .post_contents form {
+    width: 70px;
+}
+
+#post .post_comments textarea {
+    width: 100%;
+    height: 100%;
+}
+#post .post_comments>button {
+    margin-left: auto;
+    color: blue;
+    font-weight: bold;
+    background: none;
+    border: none;
+}
+
+@media (max-width : 76px) {
+    #nav {
+        width: 100px;
+    }
+
+    #nav .nav_container h1{
+        font-size: 28px;
+    }
+
+    #nav .nav_container .search{
+        display: none;
+    }
+
+    #nav .nav_container .nav_menu{
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 400px){
+    html {
+        width:max-content;
+    }
+}

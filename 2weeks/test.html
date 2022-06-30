@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>뽑</title>
+    <style>div{ color: red;}</style>
+
+    <link rel = "stylesheet" href="./static/style.css">
+
+    <style>
+        *{
+            color : darkgreen;
+        }
+        @font-face {
+    font-family: 'EarlyFontDiary';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_220508@1.0/EarlyFontDiary.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+h1{
+    font-family: 'EarlyFontDiary';
+    font-weight: 400; 
+}
+
+    </style>
+
+    
+</head>
+
+<body>
+    <h1>안녕하세요</h1>
+    <br> <!--줄바꿈-->
+    <hr> <!--가로줄-->
+    <p class="box">어ㅗ옹옹옹ㅇㅇ옹 쓰레기를  <div>자발적으로</div> 버려주세요 
+    &nbsp; &nbsp;</p> <!--&nbsp는 띄어쓰기-->
+        <details>
+            <summary>뻐법</summary>
+            <p>didddiddd</p>
+        </details>
+<!-- <div class= "" -->
+    <!--<div id=""-->
+        <!--*{} 모든 태그에 대해서 스타일 지정
+        class가져올때 .box{}해서 가져오기
+    #box2{}
+text--->
+    <a href="http://www.naver.com">링크</a>
+    <a href= "#">up</a>
+    
+    <button>버튼</button>
+
+    <a href=""naver.com target="blank" title ="네이버">네이버</a>
+     
+    <table border="1" style = "text-align:center;" >
+       <thead><th>이름</th> <th>성별</th> <th>주소</th> <th>회비</th></thead> <tr></tr>
+        <tbody><tr><td>김유진</td> <td rowspan = "2" background-style = color:aqua>여</td> <td>아산</td> <td>500</td></tr>
+        <tr><td>곽민정</td> <td>아산</td><td>1500</td></tbody></tr>
+        <tfoot></tfoot><td colspan = "3">총합</td> <td>2000</td>
+    </table>
+
+    <table border = "1" style = "text-align:center; border-collapse: collapse;">
+        <thead><tr> <th></th> <th>월</th> <th>화</th> <th>수</th> <th>목</th> <th>금</th></tr></thead>
+        <tbody>
+            <tr>
+                <td>1</td> <td></td> <td></td> <td></td> <td rowspan = "3" id = "cul">문화와 기술</td> <td></td>
+            </tr>
+            <tr>
+                <td>2</td> <td rowspan ="3" id="computer" >컴퓨터 기초</td> <td></td> <td></td> <td></td>
+            </tr>
+            <tr>
+                <td>3</td> <td></td> <td></td> <td></td> 
+            </tr>
+            <tr>
+                <td>4</td> <td></td> <td></td> <td></td> <td></td> 
+            </tr>
+            <tr>
+                <td>5</td> <td></td> <td></td> <td rowspan = "2" id = "CEsw">커잉sw</td> <td rowspan = "2" id = "writing" >글쓰기 기초</td> <td></td>
+            </tr>
+            <tr>
+                <td>6</td> <td></td> <td></td> <td></td> 
+            </tr>
+            <tr>
+                <td>7</td> <td rowspan = "2" id = "CElr">커잉lr</td> <td></td> <td rowspan = "3" id ="cpro">C프로그래밍</td> <td rowspan = "3" id = "math">확률통계</td> <td></td>
+            </tr>
+            <tr>
+                <td>8</td> <td></td> <td></td>
+            </tr>
+            <tr>
+                <td>9</td> <td></td> <td></td> <td></td>
+            </tr>
+            
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>총합</td> <td>5</td> <td>0</td> <td>5</td> <td>8</td> <td>0</td>
+            </tr>
+        </tfoot>
+    </table>
+    
+   
+
+    <ol>
+        <li>먐</li>
+    </ol>
+  <ul>
+      <li>몀묘요몽ㄹ</li>
+  </ul>
+
+
+  <div class="box1">
+    
+  </div>
+
+  <form>
+      <label>아이디<input type = "text"></label> <!--text, number, color, password, email!-->
+      비밀번호<input type="password">
+      <label for = "pw">비밀번호</label><input type = "" id = "pw"> <!--for는 거기로 이동한다는 뜻~~-->
+  </form>
+
+  <form>
+      <fieldset>
+          <legend>개인정보</legend>
+          <label> <input></label>
+      </fieldset>
+  </form>
+
+  <form>
+      <input type = "button" > <!--submit, reset-->
+  </form>
+
+  <!--체크박스는 다중선택이 되고 라디오는 다중선택이 안되고 하나만 선택 가능-->
+
+  <form>
+      <input type = "radio" name = "dd" value="1"> c언어 
+      <!--value는 c언어 누르면 1이라는 값이 전해지는거-->
+  </form>
+
+  <textarea cols = "30" rows = "10"></textarea> <!--cols는 30글자 넘으면 개행된다는거고 rows는 10줄까지 할 수 있다-->
+
+    <!--p태그랑 div태그를 여러개하면 아래로 쪼로록 생기는데 그 이유가 블록태그라
+    inline쓰면 가로로 나열됨
+    display : inline-bock; 이렇게 하면 가로 세로 쪼로록 됨
+    "display:flex;"
+    display: inline-block하면 div들 사이에 공백이 생기고 flex는 딱붙어 나옴
+
+    <style>
+        a div{
+            margine-right:20px;
+        }
+        a가 부모인데 손자애들까지 영향주고 싶을 때
+        a > div{
+
+        }
+        이렇게 하면 자식까지만 영향줌
+    
+    
+    
+    -->
+
+
+
+    
+        <div style="display : flex;">
+            <div>a</div>
+            <div>b</div>
+            <div>c</div>
+        </div>
+        <script src="./static/dd.js"></script>
+
+</body>
+
+</html>
