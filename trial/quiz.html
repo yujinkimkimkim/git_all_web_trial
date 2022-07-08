@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    div{
+        text-align: center;}
+    *{
+        background-color: rgb(234, 226, 241);
+    }
+        </style>
+    
+</head>
+<body>
+    <div>
+        <pre>
+        <ul>1+1=?</ul>
+        <input type = "text" id="aa">
+        <ul>코끼리가 사과 먹는 법(단답)</ul>
+        <input type = "text" id="bb">
+        <ul>김유진 고향</ul>
+        <input type = "text" id="cc">
+        <ul>김유진 초등학교</ul>
+        <input type = "text" id="dd">
+        <ul>김유진 고등학교</ul>
+        <input type = "text" id="ee">
+        
+
+        <button id="but">제출하기</button><br>
+        <table border="1" style = "text-align:center;" id="an" >
+            <tr><td colspan = "5">정답</td></tr>
+            <tr><td>바나나</td>
+            <td>코</td>
+            <td>공주대</td>
+            <td>아산</td>
+            <td>점프</td></tr>
+        </table>
+    </pre>
+    
+        <p id = "text"></p>
+        <p id = "text1"></p>
+        <p id = "text2"></p>
+        <p id = "text3"></p>
+        <p id = "text4"></p>
+</div>
+    
+    
+
+    <script>
+
+    an.style.visibility = "hidden";
+    text.style.visibility = "hidden";
+    text1.style.visibility = "hidden";
+    text2.style.visibility = "hidden";
+    text3.style.visibility = "hidden";
+    text4.style.visibility = "hidden";
+        
+    setTimeout(function(){
+ 	alert("제출 버튼 눌러주세요"); 
+    }, 10000);//wait 10 seconds
+
+    but.addEventListener('click', function()
+        {
+            an.style.visibility = "visible";    
+            text.style.visibility = "visible";
+            text1.style.visibility = "visible";
+            text2.style.visibility = "visible";
+            text3.style.visibility = "visible";
+            text4.style.visibility = "visible";
+        })
+
+        var a = Number(document.getElementById("aa").value);
+        if(a != 2)
+        {
+            document.getElementById("text").innerHTML = "오답";    
+        }
+        else if(a == 2){
+            document.getElementById("text").innerHTML = "정답";
+        }
+
+        var b = document.getElementById("bb").value;
+        if(b=="코")
+        {
+            document.getElementById("text1").innerHTML = "정답";    
+        }
+        else{
+            document.getElementById("text1").innerHTML = "오답";
+        }
+
+        var c = document.getElementById("cc").value;
+        if(c=="아산")
+        {
+            document.getElementById("text2").innerHTML = "정답";    
+        }
+        else{
+            document.getElementById("text2").innerHTML = "오답";
+        }
+
+        var d = document.getElementById("dd").value;
+        if(d=="충무초")
+        {
+            document.getElementById("text3").innerHTML = "정답";    
+        }
+        else{
+            document.getElementById("text3").innerHTML = "오답";
+        }
+
+        var e = document.getElementById("ee").value;
+        if(e=="한올고")
+        {
+            document.getElementById("text4").innerHTML = "정답";    
+        }
+        else{
+            document.getElementById("text4").innerHTML = "오답";
+        }
+    </script>
+
+</body>
+</html>

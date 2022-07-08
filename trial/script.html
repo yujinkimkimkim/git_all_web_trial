@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id = "text">hello</p>
+
+    <script>
+
+        var input = prompt("입력");
+        
+        var text = document.getElementById("text");
+
+        text.innerHTML = input;
+        //id값이 text인 요소를 가져온다
+        //hello가 나오는 게 아니라 입력값이 나오게 됨 input에 있는 문자 가져와서
+
+        /*text.style.color = "red";
+        text.style.textDecoration = "underline";*/
+
+
+        //css에서는 text-decoration임
+        //자바스크립트에서는 backgroundColor = "# @@@";
+
+        text.addEventListener('click', function()
+        {
+            text.style.color = "red";    
+
+        })
+
+        
+
+
+       /*var input = prompt( "입력" );
+        console.log(input);
+
+        var num = 3;
+
+        console.log(3+input);
+
+        console.log(3+parseInt(input));
+
+        document.write("<p>");
+        
+            for(var i = 0; i < input ; i++)
+            {
+                document.writeln(i);
+            }
+        document.write("</p>");
+        
+        스크립트에서 var해서 막 입력받는거 무조건 문자열로 인식함*/
+
+
+        /*var  input = prompt("입력");
+
+        if(input == "토" || input == "일")
+        {
+            console.log("휴일");
+        }
+        else
+        {
+            console.log("학교가기싫다");
+        } */
+        //while이랑 조건 연산자는 c랑 똑같다 
+
+
+
+    </script>
+
+</body>
+</html>
